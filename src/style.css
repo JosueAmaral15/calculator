@@ -1,0 +1,82 @@
+:root{
+    --theme-background : darkSlateGray;
+    --theme-color : #ffffff;
+    --button-color : blueViolet;
+    --button-hover-color : violet;
+    --screen-background-color : dimGray;
+    --screen-width : 16rem;
+    --screen-height : 3rem;
+    --padding-inline : 2rem;
+    --buttons-height : 3rem;
+    --button-margin : 0.25rem;
+    --teste : 10rem;
+    --columns : 4;
+    --lines: 6;
+    
+}
+
+body{
+    background-color: var(--theme-background);
+    color: var(--theme-color);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-button{
+    background-color: var(--button-color);
+    width: calc(var(--screen-width) / var(--columns));
+    height:var(--buttons-height);
+    border-radius : 1.5rem;
+    color:white;
+    font-weight:bold;
+    margin: var(--button-margin);
+
+}
+
+.custom-button:hover {
+    background-color : var(--button-hover-color);
+    cursor:pointer;
+}
+
+.button-panel {
+    width: calc(var(--screen-width) + var(--button-margin) * (var(--columns)+1));
+    /*height:calc(var(--buttons-height) * ( var(--lines) + 1 ) + var(--button-margin) * var(--lines));*/
+    margin-top : 0.5rem;
+}
+
+.screen {
+    width: var(--screen-width);
+    height: var(--screen-height);
+    background-color: var(--screen-background-color);
+    font-size: 2.5rem;
+}
+
+.calculator{
+    padding: var(--padding-inline);
+    background-color: silver;
+    width: calc(var(--screen-width) + var(--padding-inline) / 2 + var(--button-margin) * var(--columns));
+    height:calc(var(--buttons-height) * ( var(--lines) + 4 ) + var(--button-margin) * var(--lines));
+    border-radius: 1rem;
+    box-shadow : 16px 16px 4px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.external-part {
+    padding : 1.5rem;
+    background-color: slategray;
+    border-radius: 1rem;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-panel{
+    width: 100%;
+    /*background-color: aqua;*/
+    margin-top:1.5rem;
+}
